@@ -1,0 +1,23 @@
+databases:
+  - name: template_db
+    databaseName: dpg-cta29t2j1k6c738gdo4g-a
+    user: daniel
+    plan: free
+
+services:
+  - type: web
+    name: template
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: postgresql://daniel_tega:sX13SOr3w2WfaDlnHxdYqyN5kEPpinks@dpg-cta29t2j1k6c738gdo4g-a/harness_db
+        fromDatabase:
+          name: harness_db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
