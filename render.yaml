@@ -15,7 +15,8 @@ services:
     envVars:
       - key: postgresql://test_database_4lnl_user:RMoJTbTcHLBJfxMy0oFiesZyE4M4FLpa@dpg-cuii7lrqf0us73dpq7i0-a/test_database_4lnl
         fromDatabase:
-          name: test_database_4lnl
+          name: dpg-cuii7lrqf0us73dpq7i0-a
+          port: 5432
           password: RMoJTbTcHLBJfxMy0oFiesZyE4M4FLpa
           property: connectionString
       - key: RAILS_MASTER_KEY
