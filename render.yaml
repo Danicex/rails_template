@@ -1,7 +1,7 @@
 databases:
-  - name: template_db
-    databaseName: dpg-cta29t2j1k6c738gdo4g-a
-    user: daniel
+  - name: dpg-cuii7lrqf0us73dpq7i0-a
+    databaseName: dpg-cuii7lrqf0us73dpq7i0-a
+    user: test_database_4lnl_user
     plan: free
 
 services:

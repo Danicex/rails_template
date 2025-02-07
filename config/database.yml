@@ -19,5 +19,5 @@ test:
 
 production:
   <<: *default
-  databse_url: postgresql://test_database_4lnl_user:RMoJTbTcHLBJfxMy0oFiesZyE4M4FLpa@dpg-cuii7lrqf0us73dpq7i0-a/test_database_4lnl
-  database: test_database_4lnl
+  databse_url: 
+  database: 
